@@ -16,6 +16,7 @@ RUN echo "local_enable=YES" >> /etc/vsftpd/vsftpd.conf \
 ADD docker-entrypoint.sh /
 VOLUME /home/files
 
+EXPOSE 20
 EXPOSE 21
 
 CMD /docker-entrypoint.sh
