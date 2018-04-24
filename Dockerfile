@@ -1,7 +1,7 @@
 #vim: set ft=dockerfile:
 FROM alpine:3.7
 
-RUN apk update && apk add vsftpd
+RUN apk add --no-cache vsftpd
 
 RUN adduser -h /home/./files -s /bin/false -D files
 
