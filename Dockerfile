@@ -7,6 +7,7 @@ RUN adduser -h /home/./files -s /bin/false -D files
 
 RUN echo "local_enable=YES" >> /etc/vsftpd/vsftpd.conf \
   && echo "chroot_local_user=YES" >> /etc/vsftpd/vsftpd.conf \
+  && echo "allow_writeable_chroot=YES" >> /etc/vsftpd/vsftpd.conf \
   && echo "write_enable=YES" >> /etc/vsftpd/vsftpd.conf \
   && echo "local_umask=022" >> /etc/vsftpd/vsftpd.conf \
   && echo "passwd_chroot_enable=yes" >> /etc/vsftpd/vsftpd.conf \
